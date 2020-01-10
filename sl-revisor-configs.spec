@@ -1,6 +1,6 @@
 Name:       sl-revisor-configs
 Version:    1
-Release:    6.3.3
+Release:    6.3.4
 License:    GPLv2+
 Summary:    Kickstart and config files for creating your own SL Spins
 Group:      Applications/System
@@ -88,6 +88,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/revisor/SL6/build/scripts/anacondaupdates/*
 
 %changelog
+* Thu Jul 26 2012 Connie Sieh <csieh@fnal.gov> 1-6.3.4
+- Changed /etc/revisor/SL6/ks/sl6.install.dvd.x86_64.ks and sl6.install.dvd.i386.ks to include a few more packages
+
 * Mon Jul 23 2012 Connie Sieh <csieh@fnal.gov> 1-6.3.3
 - Changed revisor.conf to include new anaconda "final" option to disable beta message
 - Renamed /etc/revisor/SL6/ks/sl6.match.tuv.install.dvd.x86_64.ks and sl6.match.tuv.install.dvd.i386.ks to sl6.install.dvd.x86_64.ks and sl6.install.dvd.i386.ks
