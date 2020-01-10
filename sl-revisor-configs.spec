@@ -1,6 +1,6 @@
 Name:       sl-revisor-configs
 Version:    1
-Release:    6.0.2
+Release:    6.0.3
 License:    GPLv2+
 Summary:    Kickstart and config files for creating your own SL Spins
 Group:      Applications/System
@@ -88,6 +88,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/revisor/SL6/build/scripts/anacondaupdates/*
 
 %changelog
+* Mon Feb 28 2011 Connie Sieh <csieh@fnal.gov> 1-6.0.3
+- Fixed various script and config bugs.
+
 * Mon Feb 28 2011 Connie Sieh <csieh@fnal.gov> 1-6.0.1
 - Added an updates (or respin) configuration
 

@@ -7,7 +7,7 @@ VERSIONROLLING=${VERSION}rolling
 VERSIONDIR=$VERSIONROLLING
 #VERSIONDIR=$VERSION
 #Used if you are modifying/adding installclasses/
-PRODUCT_INPUT_DIR=/root/build/product
+PRODUCT_INPUT_DIR=/etc/revisor/SL6/build/scripts/product
 PRODUCT_IMG_DIR=/etc/revisor/SL6/images
 PRODUCT_IMG=sl6-product.img
 #Misc handy variables
