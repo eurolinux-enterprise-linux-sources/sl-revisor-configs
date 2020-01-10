@@ -1,15 +1,33 @@
+if [ -z $ARCH ] ; then
+   ARCH=`uname -i`
+   echo "Determined that we are on a $ARCH system"
+   export ARCH
+fi
+#
 #Change these based on your site
+#
 PRODUCT="Scientific Linux"
+RELEASE=sl
+RELEASE_UPPER=`echo $RELEASE | tr "a-z" "A-Z"`
 VERSIONMAJOR=6
-VERSIONMINOR=0
+VERSIONMINOR=3
 VERSIONROLLING=${VERSION}rolling
-#switch these if you are doing production vs rolling(test)
-VERSIONDIR=$VERSIONROLLING
-#VERSIONDIR=$VERSION
+RESULTDIRBASE=/srv/revisor/
+RESULT_DIR_TREE=$RESULTDIRBASE/${RELEASE}${VERSIONMAJOR}-$ARCH/os/$ARCH/
+RESULT_DIR_ISO=$RESULTDIRBASE/${RELEASE}${VERSIONMAJOR}-$ARCH/iso/
+if [ $ARCH = "x86_64" ] ; then
+  export UEFI_BOOT_ISO=no
+fi
 #Used if you are modifying/adding installclasses/
-PRODUCT_INPUT_DIR=/etc/revisor/SL6/build/scripts/product
-PRODUCT_IMG_DIR=/etc/revisor/SL6/images
-PRODUCT_IMG=sl6-product.img
+INPUT_DIR=/etc/revisor/${RELEASE_UPPER}${VERSIONMAJOR}/build/scripts/
+PRODUCT_INPUT_DIR=$INPUT_DIR/product
+IMG_DIR=/etc/revisor/${RELEASE_UPPER}${VERSIONMAJOR}/images
+PRODUCT_IMG=${RELEASE}${VERSIONMAJOR}-product.img
+#Locations of custom isolinux/ files
+ISOLINUX_INPUT_DIR=$INPUT_DIR/isolinux
+#Used if you are modifying anaconda , the installer
+UPDATE_INPUT_DIR=$INPUT_DIR/anacondaupdates
+UPDATES_IMG=${RELEASE}${VERSIONMAJOR}-updates.img
 #Misc handy variables
 MYPWD=`pwd`
 DATE=`date "+%m%d%y"`
@@ -22,3 +40,8 @@ export DATE
 export PRODUCT_INPUT_DIR
 export PRODUCT_IMG_DIR
 export PRODUCT_IMG
+export INPUT_DIR
+export ISOLINUX_INPUT_DIR
+export RESULTDIRBASE
+export RELEASE
+export RELEASE_UPPER

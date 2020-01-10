@@ -7,13 +7,66 @@
 
 #part iso --size=4998
 
-#timezone America/Chicago
-
 # Package manifest for the compose. 
-# Need to use "kickstart_manifest = 1" in your /etc/revisor.conf file
+# Need to use "kickstart_manifest = 1" in your /etc/revisor/revisor.conf file
 # to enable this file to be used as the definition of what is included
 # in the compose , otherwise the "comps" file defines the compose
 ##########################
 %packages 
+@base
+@core
+@debugging
+@directory-client
+@java-platform
+@network-file-system-client
+@server-platform
+@basic-desktop
+@desktop-debugging
+@desktop-platform
+@general-desktop
+@graphical-admin-tools
+@input-methods
+@legacy-x
+@x11
+@internet-browser
+@internet-applications
+@office-suite
+@remote-desktop-clients
+#basic server
+@console-internet
+@hardware-monitoring
+@large-systems
+@perl-runtime
+@desktop-platform-devel
+@print-client
+@development
+@eclipse
+@emacs
+@fonts
+@graphics
+@performance
+#
+#virtualization
+@virtualization
+@virtualization-client
+@virtualization-platform
+@php
+@postgresql
+@postgresql-client
+@mysql
+@mysql-client
+@system-admin-tools
+@technical-writing
+@tex
+@turbogears
+@web-server
+@web-servlet
+@ice-desktop
+@additional-devel
+@server-platform-devel
+#
+# Need these to build the iso image
+anaconda
+#everything else
 *
 %end

@@ -48,10 +48,10 @@ if [ $IMAGESIZE -le 65 ] ; then
 	echo "Image was too small so had to make it bigger"
 	IMAGESIZE=65
 fi
-IMAGESIZE=`expr $IMAGESIZE + 1`
+IMAGESIZE=`expr $IMAGESIZE + 10`
 echo "IMAGESIZE IS $IMAGESIZE"
 INODES=`find $RHupdates -print | wc -l`
-INODES=`expr $INODES + 10`
+INODES=`expr $INODES + 5`
 echo "INODES is $INODES"
 dd if=/dev/zero of=$TMPIMG bs=1k count=$IMAGESIZE 
 /sbin/mke2fs -F -m 0 -q -N $INODES -b 1024 $TMPIMG $IMAGESIZE
@@ -87,3 +87,4 @@ else
    fi
 fi
 echo "Copying $TMPIMG as $UPDATES_IMG_DIR/$UPDATES_IMG"
+cp $TMPIMG $UPDATES_IMG_DIR/$UPDATES_IMG

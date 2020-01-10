@@ -87,4 +87,3 @@ else
    fi
 fi
 echo "Copying $TMPIMG as $PRODUCT_IMG_DIR/$PRODUCT_IMG"
-/bin/cp -f $TMPIMG $PRODUCT_IMG_DIR/$PRODUCT_IMG
