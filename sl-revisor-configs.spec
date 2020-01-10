@@ -1,6 +1,6 @@
 Name:       sl-revisor-configs
 Version:    1
-Release:    6.0.3
+Release:    6.1.0
 License:    GPLv2+
 Summary:    Kickstart and config files for creating your own SL Spins
 Group:      Applications/System
@@ -88,6 +88,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/revisor/SL6/build/scripts/anacondaupdates/*
 
 %changelog
+* Mon Jul 11 2011 Troy Dawson <dawson@fnal.gov> 1-6.1.0
+- Added iso_label and iso_basename to revisor.conf entries
+- Changed all configurations in conf.d to be 6x instead of 6.0
+- Copied ks/sl6.match.tuv.install.dvd.*.ks to ks/sl6.match.tuv.install.dvd.*.60.ks
+- Updated ks/sl6.match.tuv.install.dvd.*.ks to match 6.1
+- Copied ks/sl6.all.groups.ks to ks/sl6.all.groups.60.ks
+- Updated ks/sl6.all.groups.ks to match SL 6.1 groups
+
 * Mon Feb 28 2011 Connie Sieh <csieh@fnal.gov> 1-6.0.3
 - Fixed various script and config bugs.
 

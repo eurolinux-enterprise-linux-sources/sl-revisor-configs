@@ -19,9 +19,7 @@
 @backup-server
 @base
 @basic-desktop
-@buildsys-build
 @cifs-file-server
-@client-mgmt-tools
 @compat-libraries
 @console-internet
 @core
@@ -40,11 +38,7 @@
 @general-desktop
 @graphical-admin-tools
 @graphics
-@ha
-@ha-management
 @hardware-monitoring
-@ice-desktop
-@identity-server
 @infiniband
 @input-methods
 @internet-applications
@@ -54,7 +48,6 @@
 @large-systems
 @legacy-unix
 @legacy-x
-@load-balancer
 @mail-server
 @mainframe-access
 @misc-sl
@@ -64,8 +57,8 @@
 @network-server
 @network-tools
 @nfs-file-server
-@office-suite
 @openafs-client
+@office-suite
 @performance
 @perl-runtime
 @php
@@ -73,10 +66,8 @@
 @postgresql-client
 @print-client
 @print-server
-@remote-desktop-clients
 @repos
-@resilient-storage
-@scalable-file-systems
+@remote-desktop-clients
 @scientific
 @security-tools
 @server-platform

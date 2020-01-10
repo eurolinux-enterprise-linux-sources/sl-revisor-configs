@@ -15,6 +15,8 @@
 # in the compose , otherwise the "comps" file defines the compose
 ##########################
 %packages 
+389-ds-base
+389-ds-base-libs
 abrt
 abrt-addon-ccpp
 abrt-addon-kerneloops
@@ -24,6 +26,7 @@ abrt-desktop
 abrt-gui
 abrt-libs
 abrt-plugin-logger
+abrt-plugin-mailx
 abrt-plugin-rhtsupport
 abrt-plugin-sosreport
 abyssinica-fonts
@@ -87,6 +90,7 @@ at-spi
 at-spi-python
 attr
 audiofile
+audispd-plugins
 audit
 audit-libs
 audit-libs-devel
@@ -137,6 +141,7 @@ avahi-libs
 avahi-tools
 avahi-ui
 avalon-framework
+avalon-logkit
 axis
 b43-fwcutter
 b43-openfwwf
@@ -162,6 +167,7 @@ bind-libs
 bind-utils
 binutils
 binutils-devel
+biosdevname
 bison
 bitmap-console-fonts
 bitmap-fangsongti-fonts
@@ -223,10 +229,10 @@ cachefilesd
 cairo
 cairo-devel
 cairomm
-cairo-spice
 c-ares
 cas
 ccid
+ccs
 cdparanoia
 cdparanoia-libs
 cdrdao
@@ -252,7 +258,9 @@ clucene-core
 cluster-cim
 cluster-glue
 cluster-glue-libs
+cluster-glue-libs-devel
 clusterlib
+clusterlib-devel
 cluster-snmp
 clutter
 cmake
@@ -291,6 +299,7 @@ coreutils
 coreutils-libs
 corosync
 corosynclib
+corosynclib-devel
 cpio
 cpp
 cpufrequtils
@@ -322,6 +331,7 @@ ctan-kerkis-sans-fonts
 ctan-kerkis-serif-fonts
 ctapi-common
 ctdb
+ctdb-devel
 culmus-aharoni-clm-fonts
 culmus-caladings-clm-fonts
 culmus-david-clm-fonts
@@ -387,7 +397,6 @@ dhcp
 dialog
 diffstat
 diffutils
-dlm-pcmk
 dmidecode
 dmraid
 dmraid-events
@@ -531,6 +540,7 @@ fcoe-utils
 fence-agents
 fence-virt
 fence-virtd
+fence-virtd-checkpoint
 fence-virtd-libvirt
 fence-virtd-multicast
 fence-virtd-serial
@@ -539,7 +549,6 @@ festival-lib
 festival-speechtools-libs
 festvox-slt-arctic-hts
 fetchmail
-ffmpeg-spice-libs
 file
 file-devel
 file-libs
@@ -559,6 +568,7 @@ flac
 flex
 flightrecorder
 flute
+foghorn
 fontconfig
 fontconfig-devel
 fontpackages-filesystem
@@ -617,7 +627,6 @@ gettext
 gettext-devel
 gettext-libs
 gfs2-utils
-gfs-pcmk
 ggz-base-libs
 ghostscript
 ghostscript-fonts
@@ -705,6 +714,7 @@ gnuplot
 gnuplot-common
 gnutls
 gnutls-devel
+gnutls-utils
 gok
 gpgme
 gpm
@@ -885,6 +895,7 @@ hunspell-wa
 hunspell-xh
 hunspell-zu
 hwdata
+hwloc
 hyphen
 hyphen-af
 hyphen-as
@@ -955,7 +966,10 @@ ibus-table-additional
 ibus-table-cangjie
 ibus-table-erbi
 ibus-table-wubi
+ibutils
+ibutils-libs
 icedax
+icedtea-web
 icu4j-eclipse
 ilmbase
 ImageMagick
@@ -971,11 +985,17 @@ inkscape
 intltool
 iok
 iotop
+ipa-admintools
 ipa-client
 ipa-gothic-fonts
 ipa-mincho-fonts
 ipa-pgothic-fonts
+ipa-pki-ca-theme
+ipa-pki-common-theme
 ipa-pmincho-fonts
+ipa-python
+ipa-server
+ipa-server-selinux
 ipmitool
 iproute
 iptables
@@ -997,16 +1017,20 @@ isomd5sum
 ivtv-firmware
 iw
 iwl1000-firmware
+iwl100-firmware
 iwl3945-firmware
 iwl4965-firmware
 iwl5000-firmware
 iwl5150-firmware
 iwl6000-firmware
+iwl6000g2a-firmware
+iwl6000g2b-firmware
 iwl6050-firmware
 jadetex
 jakarta-commons-codec
 jakarta-commons-collections
 jakarta-commons-daemon
+jakarta-commons-dbcp
 jakarta-commons-dbcp-tomcat5
 jakarta-commons-discovery
 jakarta-commons-el
@@ -1015,6 +1039,7 @@ jakarta-commons-io
 jakarta-commons-lang
 jakarta-commons-logging
 jakarta-commons-net
+jakarta-commons-pool
 jakarta-commons-pool-tomcat5
 jakarta-oro
 jasper
@@ -1219,6 +1244,8 @@ kde-settings-kdm
 kde-settings-pulseaudio
 kdeutils
 kdeutils-libs
+kdewebdev
+kdewebdev-libs
 kdm
 kernel
 kernel-debug
@@ -1294,6 +1321,7 @@ libbonobo-devel
 libbonoboui
 libbonoboui-devel
 libburn
+libcacard
 libcanberra
 libcanberra-devel
 libcanberra-gtk2
@@ -1316,6 +1344,7 @@ libcroco-devel
 libcurl
 libcurl-devel
 libcxgb3
+libcxgb4
 libdaemon
 libdbi
 libdbi-dbd-mysql
@@ -1336,6 +1365,7 @@ liberation-sans-fonts
 liberation-serif-fonts
 libertas-usb8388-firmware
 libesmtp
+libesmtp-devel
 libevent
 libexif
 libexif-devel
@@ -1441,6 +1471,7 @@ libopenraw
 libopenraw-gnome
 libotf
 libpanelappletmm
+libpath_utils
 libpcap
 libpciaccess
 libplist
@@ -1453,6 +1484,7 @@ libpurple
 libraw1394
 librdmacm
 librdmacm-utils
+libref_array
 librelp
 librepository
 librsvg2
@@ -1494,6 +1526,7 @@ libtevent
 libtextcat
 libthai
 libtheora
+libtidy
 libtiff
 libtiff-devel
 libtirpc
@@ -1687,6 +1720,13 @@ man-pages-overrides
 man-pages-pl
 man-pages-ru
 man-pages-uk
+matahari
+matahari-agent-lib
+matahari-broker
+matahari-host
+matahari-lib
+matahari-net
+matahari-service
 matchbox-window-manager
 mc
 mcpp
@@ -1708,6 +1748,7 @@ microcode_ctl
 migrationtools
 min12xxw
 mingetty
+mingw32-matahari
 minicom
 mipv6-daemon
 mkbootdisk
@@ -1724,6 +1765,7 @@ mod_dnssd
 ModemManager
 mod_nss
 mod_perl
+mod_revocator
 mod_ssl
 module-init-tools
 mod_wsgi
@@ -1806,6 +1848,7 @@ NetworkManager
 NetworkManager-glib
 NetworkManager-gnome
 NetworkManager-openswan
+netxen-firmware
 newt
 newt-python
 nfs4-acl-tools
@@ -1826,6 +1869,7 @@ nss-pam-ldapd
 nss-softokn
 nss-softokn-devel
 nss-softokn-freebl
+nss-softokn-freebl-devel
 nss-sysinit
 nss-tools
 nss-util
@@ -1836,14 +1880,17 @@ ntsysv
 numactl
 numactl-devel
 numpy
+nuxwdog
 obexd
 obex-data-server
 objectweb-asm
 oddjob
 oddjob-mkhomedir
+omping
 opal
 openais
 openaislib
+openaislib-devel
 openchange
 opencryptoki
 opencryptoki-libs
@@ -1979,10 +2026,12 @@ oprofile-jit
 ORBit2
 ORBit2-devel
 orca
+osutil
 oxygen-cursor-themes
 oxygen-icon-theme
 pacemaker
 pacemaker-libs
+pacemaker-libs-devel
 PackageKit
 PackageKit-device-rebind
 PackageKit-glib
@@ -2067,6 +2116,7 @@ perl-ExtUtils-Embed
 perl-ExtUtils-MakeMaker
 perl-ExtUtils-ParseXS
 perl-File-Fetch
+perl-File-Slurp
 perl-FreezeThaw
 perl-Frontier-RPC
 perl-Frontier-RPC-doc
@@ -2095,6 +2145,7 @@ perl-Module-Load
 perl-Module-Load-Conditional
 perl-Module-Loaded
 perl-Module-Pluggable
+perl-Mozilla-LDAP
 perl-NetAddr-IP
 perl-Net-DNS
 perl-Net-LibIDN
@@ -2166,8 +2217,16 @@ pinfo
 piranha
 pixman
 pixman-devel
-pixman-spice
 pkgconfig
+pki-ca
+pki-common
+pki-java-tools
+pki-native-tools
+pki-selinux
+pki-setup
+pki-silent
+pki-symkey
+pki-util
 planner
 plpa-libs
 plymouth
@@ -2257,6 +2316,7 @@ PyKDE4
 pykickstart
 pyOpenSSL
 pyorbit
+PyPAM
 pyparted
 PyQt4
 PyQt4-devel
@@ -2285,6 +2345,8 @@ python-gudev
 python-imaging
 python-iniparse
 python-iwlib
+python-kerberos
+python-krbV
 python-ldap
 python-libs
 python-louie
@@ -2297,6 +2359,7 @@ python-matplotlib
 python-meh
 python-memcached
 python-myghty
+python-netaddr
 python-nose
 python-nss
 python-paramiko
@@ -2310,19 +2373,24 @@ python-peak-util-extremes
 python-peak-util-symbols
 python-prioritized-methods
 python-psycopg2
+python-pyasn1
 python-pyblock
 python-pycurl
 python-pygments
 python-pylons
-python-qmf
 python-qpid
+python-qpid-qmf
 python-reportlab
 python-repoze-tm2
 python-repoze-what
+python-repoze-what-plugins-sql
 python-repoze-what-pylons
+python-repoze-what-quickstart
 python-repoze-who
 python-repoze-who-friendlyform
+python-repoze-who-plugins-sa
 python-repoze-who-testutil
+python-rhsm
 python-routes
 python-saslwrapper
 python-setuptools
@@ -2372,9 +2440,11 @@ ql2200-firmware
 ql23xx-firmware
 ql2400-firmware
 ql2500-firmware
-qmf
 qpid-cpp-client
+qpid-cpp-client-ssl
 qpid-cpp-server
+qpid-cpp-server-ssl
+qpid-qmf
 qpid-tests
 qpid-tools
 qt
@@ -2432,12 +2502,6 @@ rfkill
 rgmanager
 rhdb-utils
 rhino
-rhn-check
-rhn-client-tools
-rhnlib
-rhnsd
-rhn-setup
-rhn-setup-gnome
 rhythmbox
 rhythmbox-upnp
 ricci
@@ -2468,9 +2532,10 @@ rt61pci-firmware
 rt73usb-firmware
 rtkit
 ruby
+ruby-irb
 ruby-libs
-ruby-qmf
 ruby-qpid
+ruby-qpid-qmf
 rusers
 rusers-server
 rwho
@@ -2551,11 +2616,13 @@ sgml-common
 sgpio
 shadow-utils
 shared-mime-info
+sigar
 sil-padauk-fonts
 sinjdoc
 sip
 sip-devel
 slang
+slapi-nis
 slf4j
 smartmontools
 smc-anjalioldlipi-fonts
@@ -2576,6 +2643,7 @@ sox
 spamassassin
 speex
 spice-client
+spice-vdagent
 spice-xpi
 sqlite
 sqlite-devel
@@ -2595,6 +2663,7 @@ subversion
 subversion-javahl
 sudo
 svnkit
+svrcore
 swig
 symlinks
 sysfsutils
@@ -2682,6 +2751,7 @@ thai-scalable-waree-fonts
 theora-tools
 thunderbird
 tibetan-machine-uni-fonts
+tidy
 tigervnc
 tigervnc-server
 time
@@ -2698,6 +2768,7 @@ tomcat6-el-2.1-api
 tomcat6-jsp-2.1-api
 tomcat6-lib
 tomcat6-servlet-2.5-api
+tomcatjss
 totem
 totem-mozplugin
 totem-nautilus
@@ -2749,6 +2820,7 @@ uuid
 uuidd
 valgrind
 vconfig
+velocity
 vemana2000-fonts
 vim-common
 vim-enhanced
@@ -2759,6 +2831,7 @@ vino
 virt-manager
 virt-top
 virt-viewer
+virt-what
 vlgothic-fonts
 vlgothic-fonts-common
 vlgothic-p-fonts
@@ -2775,6 +2848,7 @@ watchdog
 wavpack
 webalizer
 webkitgtk
+werken-xpath
 wget
 which
 wireless-tools
@@ -2871,6 +2945,7 @@ xorg-x11-drv-vmware
 xorg-x11-drv-void
 xorg-x11-drv-voodoo
 xorg-x11-drv-wacom
+xorg-x11-drv-xgi
 xorg-x11-fonts-100dpi
 xorg-x11-fonts-75dpi
 xorg-x11-fonts-cyrillic
@@ -2920,13 +2995,10 @@ yum-metadata-parser
 yum-plugin-aliases
 yum-plugin-changelog
 yum-plugin-downloadonly
-yum-plugin-protect-packages
 yum-plugin-security
 yum-plugin-tmprepo
 yum-plugin-verify
 yum-plugin-versionlock
-yum-presto
-yum-rhn-plugin
 yum-utils
 zd1211-firmware
 zenity
@@ -2934,10 +3006,13 @@ zip
 zlib
 zlib-devel
 zsh
+alpine
+abattis-cantarell-fonts
 icewm*
 live*
 openafs*
 revisor*
+yum-autoupdate
 yum-conf*
 SL_*
 %end
